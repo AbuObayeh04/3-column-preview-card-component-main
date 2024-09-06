@@ -1,0 +1,107 @@
+:root {
+    --orange-color: hsl(31, 77%, 52%);
+    --cyan-color: hsl(184, 100%, 22%);
+    --dark-cyan: hsl(179, 100%, 13%);
+    --paragraph-color: hsla(0, 0%, 100%, 0.75);
+    --main-color: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 15px;
+}
+
+section {
+    margin: 135px auto;
+    width: min(900px, 80%);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+section>div {
+    padding: 40px;
+}
+
+.sedans {
+    background-color: var(--orange-color);
+}
+
+.suvs {
+    background-color: var(--cyan-color);
+}
+
+.luxury {
+    background-color: var(--dark-cyan);
+}
+
+.box .logo {
+    margin: 20px 0;
+}
+
+.box h1 {
+    color: var(--paragraph-color);
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.box p {
+    font-family: "Lexend Deca", system-ui;
+    color: var(--paragraph-color);
+    line-height: 2;
+    margin: 30px 0 80px;
+    font-weight: 400;
+}
+
+@media (max-width : 767px) {
+    .box p {
+        margin-bottom: 15px;
+    }
+}
+
+.box a {
+    text-decoration: none;
+    background-color: var(--main-color);
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: block;
+    width: fit-content;
+    font-family: "Lexend Deca", system-ui;
+    border: var(--main-color) solid 1px;
+}
+
+.sedans a {
+    color: var(--orange-color);
+}
+
+.suvs a {
+    color: var(--cyan-color);
+}
+
+.luxury a {
+    color: var(--dark-cyan);
+}
+
+a:hover {
+    color: hsl(0, 0%, 95%);
+}
+
+.sedans a:hover {
+    background-color: var(--orange-color);
+}
+
+.suvs a:hover {
+    background-color: var(--cyan-color);
+}
+
+.luxury a:hover {
+    background-color: var(--dark-cyan);
+}
